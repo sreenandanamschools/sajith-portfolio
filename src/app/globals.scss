@@ -1,0 +1,108 @@
+:root {
+  --bg-color: #FCFCFA; /* Warm editorial paper background */
+  --text-primary: #0F0F0F; /* Rich soft black */
+  --text-muted: #5C5C56; /* Editorial warm grey */
+  --accent: #0F0F0F; /* Premium deep black accent */
+  --accent-light: #F5F5F0; /* Ultra light warm grey tint */
+  --border-color: #DCDCD4; /* Thin tactile border */
+  --border-light: #EBEBE6; /* Subtle divider color */
+  --white: #FFFFFF;
+
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
+  --max-width: 1440px;
+  --gutter: 2rem;
+  --header-height: 80px;
+}
+
+@theme {
+  --color-accent: var(--accent);
+  --color-bg-paper: var(--bg-color);
+  --color-charcoal: var(--text-primary);
+  --color-muted-grey: var(--text-muted);
+}
+
+/* Reset overrides for our premium editorial design */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--text-primary);
+}
+
+p {
+  font-family: var(--font-sans);
+  color: var(--text-muted);
+  font-weight: 300;
+}
+
+/* Scroll reveal classes */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  
+  &.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Premium micro-interactions & thin borders */
+.thin-border {
+  border: 1px solid var(--border-color);
+}
+
+.thin-border-light {
+  border-bottom: 1px solid var(--border-light);
+}
+
+/* Custom Accordion smooth transition */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 300px;
+}
+
+/* 3D Visual Layer Utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.depth-card {
+  transition: transform 0.1s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
+  
+  &:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+  }
+}
+
+.depth-shadow {
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+}
+
+.depth-element-text {
+  transform: translateZ(30px);
+}
+
+.depth-element-bg {
+  transform: translateZ(10px);
+}
+
