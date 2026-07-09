@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import LocationMap from "./LocationMap";
 
 export default function Contact() {
   return (
@@ -103,17 +104,11 @@ export default function Contact() {
 
         <div>
           <h4 className="text-[10px] font-semibold uppercase tracking-wider text-[#0F0F0F] mb-3">Location Details</h4>
-          <div className="w-full h-60 bg-[#F0F0EA] border border-[#DCDCD4] relative overflow-hidden mb-6 depth-shadow">
-            <svg className="w-full h-full stroke-[#DCDCD4] stroke-[1] fill-[#FCFCFA]" viewBox="0 0 400 250">
-              <path d="M 0 50 L 400 50 M 0 100 L 400 100 M 0 150 L 400 150 M 0 200 L 400 200" />
-              <path d="M 50 0 L 50 250 M 100 0 L 100 250 M 150 0 L 150 250 M 200 0 L 200 250 M 250 0 L 250 250 M 300 0 L 300 250 M 350 0 L 350 250" />
-              <path d="M 0 0 L 400 250" style={{ stroke: "#DCDCD4", strokeWidth: 2 }} />
-              <path d="M 0 250 L 400 0" style={{ stroke: "#DCDCD4", strokeWidth: 2 }} />
-            </svg>
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-[#0F0F0F] rounded-full">
-              <span className="absolute -top-1.5 -left-1.5 w-6 h-6 border border-[#0F0F0F] rounded-full animate-ping opacity-75" />
-            </div>
-          </div>
+          <LocationMap 
+            lat={28.6290} 
+            lng={77.2274} 
+            placeName="Level 4, The Centrium Towers, Barakhamba Road, Connaught Place, New Delhi, 110001" 
+          />
         </div>
       </div>
     </section>
