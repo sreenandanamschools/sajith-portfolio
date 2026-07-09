@@ -25,7 +25,7 @@ export default function Contact() {
           {/* Call Now */}
           <motion.a 
             whileHover={{ scale: 1.01, x: 4 }}
-            href="tel:+919876543210"
+            href="tel:+919633334556"
             className="flex items-center justify-between p-6 border border-[#DCDCD4] bg-[#FCFCFA] hover:border-[#0F0F0F] transition-colors"
           >
             <div className="flex items-center gap-4">
@@ -34,7 +34,7 @@ export default function Contact() {
               </svg>
               <div className="flex flex-col">
                 <span className="text-[10px] font-semibold uppercase tracking-wider text-[#5C5C56]">Call Directly</span>
-                <span className="text-base font-medium text-[#0F0F0F]">+91 98765 43210</span>
+                <span className="text-base font-medium text-[#0F0F0F]">+91 96333 34556</span>
               </div>
             </div>
             <span className="text-[10px] font-semibold uppercase tracking-wider text-[#0F0F0F]">Dial Now</span>
@@ -43,7 +43,7 @@ export default function Contact() {
           {/* WhatsApp Now */}
           <motion.a 
             whileHover={{ scale: 1.01, x: 4 }}
-            href="https://wa.me/919876543210"
+            href="https://wa.me/919633334556"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-between p-6 border border-[#DCDCD4] bg-[#FCFCFA] hover:border-[#0F0F0F] transition-colors"
@@ -54,7 +54,7 @@ export default function Contact() {
               </svg>
               <div className="flex flex-col">
                 <span className="text-[10px] font-semibold uppercase tracking-wider text-[#5C5C56]">WhatsApp Chat</span>
-                <span className="text-base font-medium text-[#0F0F0F]">+91 98765 43210</span>
+                <span className="text-base font-medium text-[#0F0F0F]">+91 96333 34556</span>
               </div>
             </div>
             <span className="text-[10px] font-semibold uppercase tracking-wider text-[#0F0F0F]">Message</span>
@@ -95,7 +95,7 @@ export default function Contact() {
 
           <div className="mb-10">
             <h4 className="text-[10px] font-semibold uppercase tracking-wider text-[#0F0F0F] mb-3">Contact Details</h4>
-            <p className="text-base text-[#0F0F0F] font-light leading-relaxed">Mobile: <a href="tel:+919876543210" className="hover:underline">+91 98765 43210</a></p>
+            <p className="text-base text-[#0F0F0F] font-light leading-relaxed">Mobile: <a href="tel:+919633334556" className="hover:underline">+91 96333 34556</a></p>
             <p className="text-base text-[#0F0F0F] font-light leading-relaxed mt-1">Chambers: <a href="tel:+911145567789" className="hover:underline">+91 11 4556 7789</a></p>
             <p className="text-base text-[#0F0F0F] font-light leading-relaxed mt-1">Email: <a href="mailto:counsel@sajithpartners.com" className="hover:underline">counsel@sajithpartners.com</a></p>
           </div>

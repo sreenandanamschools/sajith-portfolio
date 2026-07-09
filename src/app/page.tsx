@@ -13,10 +13,14 @@ import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import MobileStickyCta from "@/components/MobileStickyCta";
+import DisclaimerModal from "@/components/DisclaimerModal";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#FCFCFA] text-[#0F0F0F] selection:bg-[#0F0F0F] selection:text-white overflow-x-hidden">
+      
+      {/* Entry Disclaimer Popup */}
+      <DisclaimerModal />
       {/* Background Subtle 3D Grid Overlay - Opacity increased to 0.08 for higher visibility */}
       <div className="fixed inset-0 pointer-events-none opacity-[0.04] z-0">
         <div
