@@ -12,7 +12,6 @@ import Process from "@/components/Process";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import MobileStickyCta from "@/components/MobileStickyCta";
 import DisclaimerModal from "@/components/DisclaimerModal";
 
 export default function Home() {
@@ -37,7 +36,7 @@ export default function Home() {
       <Header />
 
       {/* Main Content Container */}
-      <main className="max-w-[1440px] mx-auto px-6 pt-10 relative z-10">
+      <main className="max-w-[1440px] mx-auto px-6 pt-28 md:pt-10 pb-12 md:pb-0 relative z-10">
         <Hero />
         <About />
         <PracticeAreas />
@@ -48,9 +47,6 @@ export default function Home() {
         <FAQ />
         <Contact />
       </main>
-
-      {/* Mobile Sticky CTA shortcut buttons */}
-      <MobileStickyCta />
 
       {/* Footer */}
       <Footer />

@@ -32,14 +32,33 @@ export default function About() {
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        <h3 className="text-xs uppercase tracking-[0.15em] text-[#0F0F0F] font-semibold mb-8">Professional Timeline</h3>
+        <h3 className="text-xs uppercase tracking-[0.15em] text-[#0F0F0F] font-semibold mb-6">Journey & Education</h3>
         <div className="flex flex-col">
+          <div className="mb-3">
+            <span className="text-[10px] uppercase tracking-[0.15em] text-[#5C5C56] font-semibold">Education</span>
+          </div>
+          {[
+            { year: "[Year]", role: "LL.B.", desc: "Government Law College, Kozhikode — University of Calicut." },
+            { year: "[Year]", role: "M.A.", desc: "Mahatma Gandhi College, Thiruvananthapuram — University of Kerala." },
+            { year: "[Year]", role: "B.A.", desc: "Mahatma Gandhi College, Thiruvananthapuram — University of Kerala." },
+          ].map((item, idx) => (
+            <div key={`edu-${idx}`} className="grid grid-cols-1 sm:grid-cols-[100px_1fr] gap-2 sm:gap-6 py-6 border-b border-[#EBEBE6]">
+              <span className="font-serif text-xl text-[#0F0F0F] font-semibold">{item.year}</span>
+              <div>
+                <h4 className="font-semibold text-sm mb-1">{item.role}</h4>
+                <p className="text-sm text-[#5C5C56] font-light">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+          <div className="mt-4 mb-3">
+            <span className="text-[10px] uppercase tracking-[0.15em] text-[#5C5C56] font-semibold">Professional Career</span>
+          </div>
           {[
             { year: "2018", role: "Founder & Managing Partner", desc: "Established Sajith & Partners chambers in New Delhi, specializing in corporate insolvency, property partition suits, and commercial litigation." },
             { year: "2012", role: "Senior Counsel — High Court of Delhi", desc: "Led litigation and trial defense teams in complex civil, labor, and constitutional writ matters, establishing vital judicial precedents." },
             { year: "2009", role: "Associate Advocate", desc: "Acquired comprehensive training in commercial drafting, banking recovery matters, and consumer dispute resolution." }
           ].map((item, idx) => (
-            <div key={idx} className="grid grid-cols-[100px_1fr] gap-6 py-6 border-b border-[#EBEBE6] last:border-b-0">
+            <div key={`career-${idx}`} className="grid grid-cols-1 sm:grid-cols-[100px_1fr] gap-2 sm:gap-6 py-6 border-b border-[#EBEBE6] last:border-b-0">
               <span className="font-serif text-xl text-[#0F0F0F] font-semibold">{item.year}</span>
               <div>
                 <h4 className="font-semibold text-sm mb-1">{item.role}</h4>

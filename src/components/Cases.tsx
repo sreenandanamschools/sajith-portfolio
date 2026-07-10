@@ -39,16 +39,16 @@ export default function Cases() {
                 <h3 className="font-serif text-2xl md:text-3xl text-[#0F0F0F] mb-8">{item.title}</h3>
               </div>
               <div className="flex flex-col gap-6 text-sm depth-element-bg">
-                <div className="grid grid-cols-[100px_1fr] gap-4">
-                  <span className="text-[10px] uppercase font-semibold text-[#0F0F0F] tracking-wider mt-1">Challenge</span>
+                <div className="grid grid-cols-1 sm:grid-cols-[100px_1fr] gap-1 sm:gap-4">
+                  <span className="text-[10px] uppercase font-semibold text-[#0F0F0F] tracking-wider">Challenge</span>
                   <span className="text-[#5C5C56] font-light leading-relaxed">{item.challenge}</span>
                 </div>
-                <div className="grid grid-cols-[100px_1fr] gap-4">
-                  <span className="text-[10px] uppercase font-semibold text-[#0F0F0F] tracking-wider mt-1">Strategy</span>
+                <div className="grid grid-cols-1 sm:grid-cols-[100px_1fr] gap-1 sm:gap-4">
+                  <span className="text-[10px] uppercase font-semibold text-[#0F0F0F] tracking-wider">Strategy</span>
                   <span className="text-[#5C5C56] font-light leading-relaxed">{item.strategy}</span>
                 </div>
-                <div className="grid grid-cols-[100px_1fr] gap-4">
-                  <span className="text-[10px] uppercase font-semibold text-[#0F0F0F] tracking-wider mt-1">Outcome</span>
+                <div className="grid grid-cols-1 sm:grid-cols-[100px_1fr] gap-1 sm:gap-4">
+                  <span className="text-[10px] uppercase font-semibold text-[#0F0F0F] tracking-wider">Outcome</span>
                   <span className="text-[#0F0F0F] font-medium leading-relaxed">{item.outcome}</span>
                 </div>
               </div>
