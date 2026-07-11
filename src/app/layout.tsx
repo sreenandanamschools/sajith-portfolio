@@ -1,12 +1,73 @@
 import type { Metadata } from "next";
+import { Cormorant_Garamond, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import "./globals.scss";
 import SmoothScroll from "@/components/SmoothScroll";
 
+const cormorantGaramond = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-serif",
+  display: "swap",
+});
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-sans",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  title: "Sajith | Advocate in New Delhi | Legal Consultation",
-  description: "Sajith is a leading Advocate in New Delhi offering professional legal consultation. Expert representation as a Civil & Criminal Lawyer, Property Lawyer, Family Lawyer, and Corporate Legal Services.",
-  keywords: ["Advocate in New Delhi", "Legal Consultation in New Delhi", "Civil & Criminal Lawyer", "Property Lawyer", "Family Lawyer", "Corporate Legal Services", "Supreme Court Lawyer", "Delhi High Court", "NCLT representation"],
+  title: {
+    default:
+      "Sajith | Advocate in Thiruvananthapuram | Vanchiyoor Court & Trivandrum District Court",
+    template: "%s | Sajith - Advocate",
+  },
+  description:
+    "Sajith is an advocate practicing at Vanchiyoor Court and Trivandrum District Court, Thiruvananthapuram. Expert legal representation in Civil Litigation, Criminal Law, Family & Matrimonial Law, Consumer Disputes, and Property matters. MA LL.B., Government Law College, Kozhikode.",
+  keywords: [
+    "Advocate in Thiruvananthapuram",
+    "Lawyer in Trivandrum",
+    "Vanchiyoor Court advocate",
+    "Trivandrum District Court lawyer",
+    "Civil lawyer Kerala",
+    "Criminal lawyer Trivandrum",
+    "Family lawyer Thiruvananthapuram",
+    "Property lawyer Kerala",
+    "Consumer dispute lawyer",
+    "Legal consultation Trivandrum",
+    "Government Law College Kozhikode alumni",
+    "Kerala advocate",
+  ],
+  authors: [{ name: "Sajith" }],
+  creator: "Sajith",
+  publisher: "Sajith",
+  formatDetection: {
+    telephone: true,
+    email: true,
+    address: true,
+  },
+  openGraph: {
+    title:
+      "Sajith | Advocate in Thiruvananthapuram | Vanchiyoor Court & Trivandrum District Court",
+    description:
+      "Expert legal representation in Civil Litigation, Criminal Law, Family & Matrimonial Law, Consumer Disputes, and Property matters at Vanchiyoor Court and Trivandrum District Court.",
+    siteName: "Sajith - Advocate",
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Sajith | Advocate in Thiruvananthapuram",
+    description:
+      "Advocate practicing at Vanchiyoor Court & Trivandrum District Court. Expert in Civil, Criminal, Family, and Property law.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {},
 };
 
 export default function RootLayout({
@@ -17,17 +78,39 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="h-full antialiased"
+      className={`${cormorantGaramond.variable} ${plusJakartaSans.variable} h-full antialiased`}
     >
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+        <link rel="icon" href="/favicon/favicon.ico" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LegalService",
+              name: "Sajith - Advocate",
+              description:
+                "Advocate practicing at Vanchiyoor Court and Trivandrum District Court, Thiruvananthapuram.",
+              telephone: "+919633334556",
+              email: "advsajithm@gmail.com",
+              areaServed: [
+                { "@type": "City", name: "Thiruvananthapuram" },
+                { "@type": "State", name: "Kerala" },
+              ],
+              hasOccupation: {
+                "@type": "Occupation",
+                name: "Advocate",
+                occupationLocation: {
+                  "@type": "City",
+                  name: "Thiruvananthapuram",
+                },
+              },
+            }),
+          }}
+        />
       </head>
       <body className="min-h-full flex flex-col">
-        <SmoothScroll>
-          {children}
-        </SmoothScroll>
+        <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
   );

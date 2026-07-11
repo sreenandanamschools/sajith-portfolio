@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import TiltCard from "./TiltCard";
 
@@ -11,7 +9,7 @@ export default function PracticeAreas() {
           Areas of Practice
         </span>
         <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#0F0F0F]">
-          Specialized legal expertise across commercial and civil domains.
+          Civil, criminal, consumer, property, and corporate matters — among others.
         </h2>
       </div>
 
@@ -22,7 +20,10 @@ export default function PracticeAreas() {
             desc: "Writ petitions, civil appeals, injunctions, and suits for recovery under the Civil Procedure Code (CPC).",
             icon: (
               <svg className="w-10 h-10 text-[#0F0F0F] mb-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 22V2M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                <path d="M12 3v17M8 20h8" />
+                <path d="M4 6h16" />
+                <path d="M4 6l-3 7h6l-3-7z" />
+                <path d="M20 6l-3 7h6l-3-7z" />
               </svg>
             )
           },
@@ -101,8 +102,7 @@ export default function PracticeAreas() {
             desc: "Institution of suits under the DRT (Debt Recovery Tribunal), SARFAESI compliance, and Section 138 NI Act notices.",
             icon: (
               <svg className="w-10 h-10 text-[#0F0F0F] mb-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-                <line x1="12" y1="1" x2="12" y2="23"/>
-                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                <path d="M6 4h12M6 9h12M6 4a6 6 0 0 1 0 12h3l7 6" />
               </svg>
             )
           },
@@ -157,6 +157,58 @@ export default function PracticeAreas() {
             </div>
           </TiltCard>
         ))}
+      </div>
+
+      {/* Core Competencies Section */}
+      <div className="mt-24 pt-16 border-t border-[#EBEBE6] grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-12">
+        <div>
+          <span className="text-[10px] uppercase tracking-[0.2em] text-[#5C5C56] font-semibold block mb-4">
+            Core Competencies
+          </span>
+          <h3 className="font-serif text-3xl text-[#0F0F0F] leading-tight">
+            Areas of Focus
+          </h3>
+          <p className="text-sm text-[#5C5C56] font-light mt-4 leading-relaxed">
+            My practice spans litigation, drafting, and advisory work. I appear regularly before the District Court, consumer forums, and other tribunals in Thiruvananthapuram.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <div>
+            <h4 className="text-xs uppercase tracking-[0.15em] text-[#0F0F0F] font-semibold mb-4">Legal Practice</h4>
+            <ul className="flex flex-col gap-2.5">
+              {[
+                "Civil Litigation",
+                "Consumer Law",
+                "Property & Land Disputes",
+                "Legal Drafting & Documentation",
+                "Court Proceedings & Advocacy",
+                "Client Counseling",
+              ].map((item) => (
+                <li key={item} className="text-sm text-[#5C5C56] font-light flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-[#0F0F0F] rounded-full shrink-0" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="flex flex-col gap-6">
+            <div>
+              <h4 className="text-xs uppercase tracking-[0.15em] text-[#0F0F0F] font-semibold mb-4">Languages</h4>
+              <ul className="flex flex-col gap-2.5">
+                {[
+                  "Malayalam",
+                  "English",
+                  "Hindi",
+                ].map((item) => (
+                  <li key={item} className="text-sm text-[#5C5C56] font-light flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 bg-[#0F0F0F] rounded-full shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

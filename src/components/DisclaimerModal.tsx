@@ -7,12 +7,15 @@ export default function DisclaimerModal() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Check acceptance state on client side only to avoid SSR hydration mismatch
     const accepted = localStorage.getItem("sajith_disclaimer_accepted");
-    if (!accepted) {
+    if (accepted) return;
+
+    const id = requestAnimationFrame(() => {
       setIsVisible(true);
       document.body.style.overflow = "hidden";
-    }
+    });
+
+    return () => cancelAnimationFrame(id);
   }, []);
 
   const handleAgree = () => {
@@ -45,10 +48,15 @@ export default function DisclaimerModal() {
           >
             {/* Logo neckband top badge */}
             <div className="flex justify-center mb-6">
-              <svg className="w-10 h-10 text-[#0F0F0F]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 4h16l-3 4H7L4 4z" fill="currentColor" />
-                <path d="M8.5 8h2.5v10H8.5V8z" fill="#FCFCFA" stroke="currentColor" strokeWidth="1.2" />
-                <path d="M13 8h2.5v10H13V8z" fill="#FCFCFA" stroke="currentColor" strokeWidth="1.2" />
+              <svg className="w-10 h-10 text-[#0F0F0F]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 3v3" />
+                <path d="M9 6h6" />
+                <path d="M12 9v3" />
+                <path d="M7 12h10" />
+                <path d="M5 15c0 1.5 1.5 3 3.5 3h7c2 0 3.5-1.5 3.5-3" />
+                <path d="M8 18v1a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-1" />
+                <path d="M2 21h20" />
+                <path d="M12 21v-3" />
               </svg>
             </div>
 

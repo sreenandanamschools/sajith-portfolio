@@ -24,9 +24,9 @@ export default function Hero() {
           Practical Solutions.
         </h1>
         <p className="text-lg text-[#5C5C56] font-light max-w-[580px] leading-relaxed">
-          Providing refined, results-driven legal representation before High
-          Courts and District tribunals. We protect your interests
-          with transparency and empirical jurisprudence.
+          Providing thorough legal representation before District Courts and
+          tribunals. I protect your interests with transparency and a commitment
+          to my clients.
         </p>
         <div className="flex flex-wrap gap-3 mt-8 mb-8">
           <span className="inline-block border border-[#DCDCD4] px-4 py-2 text-xs tracking-wider font-medium text-[#5C5C56]">
@@ -41,11 +41,13 @@ export default function Hero() {
             whileHover={{ y: -2, scale: 1.01 }}
             whileTap={{ scale: 0.99 }}
             href="tel:+919633334556"
+            aria-label="Call Sajith at +91 96333 34556"
             className="inline-flex items-center justify-center bg-[#0F0F0F] text-[#FCFCFA] border border-[#0F0F0F] px-8 py-4 text-xs uppercase tracking-wider font-semibold hover:bg-transparent hover:text-[#0F0F0F] transition-all duration-300 depth-shadow"
           >
             Call Now
             <svg
               className="ml-2.5"
+              aria-hidden="true"
               width="16"
               height="16"
               viewBox="0 0 24 24"
@@ -64,6 +66,7 @@ export default function Hero() {
             href="https://wa.me/919633334556"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Send a WhatsApp message to Sajith"
             className="inline-flex items-center justify-center bg-transparent text-[#0F0F0F] border border-[#DCDCD4] px-8 py-4 text-xs uppercase tracking-wider font-semibold hover:border-[#0F0F0F] hover:bg-[#0f0f0f]/5 transition-all duration-300"
           >
             WhatsApp Consultation
@@ -71,17 +74,18 @@ export default function Hero() {
           <motion.a
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.99 }}
-            href="mailto:counsel@sajithpartners.com"
+            href="mailto:advsajithm@gmail.com"
+            aria-label="Send an email to Sajith"
             className="inline-flex items-center justify-center bg-transparent text-[#0F0F0F] border border-[#DCDCD4] px-8 py-4 text-xs uppercase tracking-wider font-semibold hover:border-[#0F0F0F] hover:bg-[#0f0f0f]/5 transition-all duration-300"
           >
-            Email Chambers
+            Send Email
           </motion.a>
         </div>
         <div className="flex gap-6 md:gap-12 border-t border-[#EBEBE6] pt-8">
           {[
-            { val: "15+", label: "Years of Practice" },
+            { val: "18+", label: "Years of Practice" },
             { val: "1,200+", label: "Cases Represented" },
-            { val: "2h", label: "Response Window" },
+            { val: "2h", label: "Avg. Response Time" },
           ].map((stat, idx) => (
             <div key={idx} className="flex flex-col">
               <span className="font-serif text-2xl text-[#0F0F0F] font-medium">
@@ -95,15 +99,18 @@ export default function Hero() {
         </div>
       </motion.div>
 
-      <ParallaxSection speed={0.15} className="w-full aspect-[4/5] order-1 lg:order-2">
+      <ParallaxSection
+        speed={0.15}
+        className="w-full aspect-[4/5] order-1 lg:order-2"
+      >
         <TiltCard className="w-full h-full">
           <div
             className="w-full h-full overflow-hidden border border-[#DCDCD4] relative group depth-shadow"
             style={{ transformStyle: "preserve-3d" }}
           >
             <Image
-              src="/assets/portrait.jpeg"
-              alt="Sajith, Advocate & Legal Counsel"
+              src="/assets/portrait.webp"
+              alt="Sajith, Advocate at Vanchiyoor Court, Thiruvananthapuram"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 40vw"

@@ -21,27 +21,30 @@ export default function FAQ() {
       </div>
 
       <div className="max-w-[800px] mx-auto">
-        {[
-          { q: "How long does it take to clear property title and obtain RERA clearances in India?", a: "Title search and clearance takes 4 to 6 weeks depending on the Sub-Registrar records and municipal offices. Obtaining RERA registration and local body approvals generally takes another 30 to 45 days, depending on complete documentation." },
-          { q: "What documents are required for my initial consultation?", a: "Please share any current litigation papers, agreements, communications (emails/letters), and relevant corporate registrations. A brief chronological summary of events is highly recommended." },
-          { q: "How does the office charge for litigation matters?", a: "Our fee structure is based on a fixed brief fee and appearance fee retainer, aligned with the Bar Council of India guidelines. The fee details for trial courts, NCLT, High Court, or Supreme Court representations are detailed during the initial consultation." }
-        ].map((item, idx) => (
-          <div key={idx} className={`border-b border-[#DCDCD4] accordion-item ${activeFaq === idx ? "active" : ""}`}>
-            <button
-              onClick={() => toggleFaq(idx)}
-              className="w-full flex justify-between items-center py-6 text-left font-serif text-lg md:text-xl text-[#0F0F0F] hover:text-[#0F0F0F] transition-colors focus:outline-none"
-            >
-              {item.q}
-              <span className="relative w-[18px] h-[18px] shrink-0">
-                <span className="absolute top-[8px] left-0 w-[18px] h-[1px] bg-[#0F0F0F]" />
-                <span className={`absolute top-0 left-[8px] w-[1px] h-[18px] bg-[#0F0F0F] transition-transform duration-300 ${activeFaq === idx ? "rotate-90 scale-y-0" : ""}`} />
-              </span>
-            </button>
-            <div className="accordion-content">
-              <p className="pb-6 text-sm text-[#5C5C56] font-light leading-relaxed">{item.a}</p>
+          {[
+            { q: "How long does it take to clear property title and obtain RERA clearances in India?", a: "Title search and clearance takes 4 to 6 weeks depending on the Sub-Registrar records and municipal offices. Obtaining RERA registration and local body approvals generally takes another 30 to 45 days, depending on complete documentation." },
+            { q: "What documents are required for my initial consultation?", a: "Please share any current litigation papers, agreements, communications (emails/letters), and relevant corporate registrations. A brief chronological summary of events is highly recommended." },
+            { q: "How do you charge for litigation matters?", a: "The fee structure is based on a fixed brief fee and appearance fee retainer, aligned with the Bar Council of India guidelines. Detailed fee information is provided during the initial consultation." }
+          ].map((item, idx) => (
+            <div key={idx} className={`border-b border-[#DCDCD4] accordion-item ${activeFaq === idx ? "active" : ""}`}>
+              <button
+                onClick={() => toggleFaq(idx)}
+                aria-expanded={activeFaq === idx}
+                aria-controls={`faq-panel-${idx}`}
+                id={`faq-trigger-${idx}`}
+                className="w-full flex justify-between items-center py-6 text-left font-serif text-lg md:text-xl text-[#0F0F0F] hover:text-[#0F0F0F] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0F0F0F] focus-visible:ring-inset"
+              >
+                {item.q}
+                <span className="relative w-[18px] h-[18px] shrink-0" aria-hidden="true">
+                  <span className="absolute top-[8px] left-0 w-[18px] h-[1px] bg-[#0F0F0F]" />
+                  <span className={`absolute top-0 left-[8px] w-[1px] h-[18px] bg-[#0F0F0F] transition-transform duration-300 ${activeFaq === idx ? "rotate-90 scale-y-0" : ""}`} />
+                </span>
+              </button>
+              <div id={`faq-panel-${idx}`} role="region" aria-labelledby={`faq-trigger-${idx}`} className="accordion-content">
+                <p className="pb-6 text-sm text-[#5C5C56] font-light leading-relaxed">{item.a}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
       </div>
     </section>
   );

@@ -7,12 +7,12 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
   useEffect(() => {
     // Initialize Lenis for premium, buttery-smooth scrolling
     const lenis = new Lenis({
-      duration: 1.8, // Slightly longer duration for a luxurious, slow-scroll feel
+      duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Custom exponential ease-out
       orientation: "vertical",
       gestureOrientation: "vertical",
       smoothWheel: true,
-      wheelMultiplier: 0.85, // Slower multiplier for a heavy, cinematic feel
+      wheelMultiplier: 1.0,
       touchMultiplier: 1.5,
     });
 

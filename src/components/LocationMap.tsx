@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 
 interface LocationMapProps {
@@ -9,9 +7,9 @@ interface LocationMapProps {
 }
 
 export default function LocationMap({
-  lat = 28.6290,
-  lng = 77.2274,
-  placeName = "Level 4, The Centrium Towers, Barakhamba Road, Connaught Place, New Delhi, 110001"
+  lat = 8.4984,
+  lng = 76.9411,
+  placeName = "Court Road, Vanchiyoor, Thiruvananthapuram, Kerala, 695035"
 }: LocationMapProps) {
   // Bounding box calculation for the OSM embed
   const delta = 0.004;
@@ -21,7 +19,6 @@ export default function LocationMap({
   const maxLat = lat + delta / 2;
 
   const embedUrl = `https://www.openstreetmap.org/export/embed.html?bbox=${minLng}%2C${minLat}%2C${maxLng}%2C${maxLat}&layer=mapnik`;
-  const externalMapUrl = `https://www.openstreetmap.org/?mlat=${lat}&mlon=${lng}#map=17/${lat}/${lng}`;
   const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`;
 
   return (
