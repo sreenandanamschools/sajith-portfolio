@@ -19,13 +19,14 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.advsajithm.in"),
   title: {
     default:
-      "Sajith | Best Lawyer in Trivandrum | Advocate in Thiruvananthapuram",
+      "Advocate Sajith | Best Lawyer in Thiruvananthapuram",
     template: "%s | Sajith - Advocate",
   },
   description:
-    "Sajith is an advocate practicing at Vanchiyoor Court and Trivandrum District Court, Thiruvananthapuram. Expert legal representation in Civil Litigation, Criminal Law, Family & Matrimonial Law, Consumer Disputes, and Property matters. MA LL.B., Government Law College, Kozhikode.",
+    "Advocate Sajith provides expert legal representation and consultation at Vanchiyoor & District Court, Thiruvananthapuram for civil, criminal & property law.",
   keywords: [
     "Best lawyer in Trivandrum",
     "Lawyers in Trivandrum",
@@ -52,9 +53,9 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "Sajith | Best Lawyer in Trivandrum | Advocate in Thiruvananthapuram",
+      "Advocate Sajith | Best Lawyer in Thiruvananthapuram",
     description:
-      "Expert legal representation in Civil Litigation, Criminal Law, Family & Matrimonial Law, Consumer Disputes, and Property matters at Vanchiyoor Court and Trivandrum District Court.",
+      "Advocate Sajith provides expert legal representation and consultation at Vanchiyoor & District Court, Thiruvananthapuram for civil, criminal & property law.",
     siteName: "Sajith - Advocate",
     locale: "en_IN",
     type: "website",
@@ -72,7 +73,9 @@ export const metadata: Metadata = {
   verification: {
     google: "YOUR_GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE",
   },
-  alternates: {},
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function RootLayout({
