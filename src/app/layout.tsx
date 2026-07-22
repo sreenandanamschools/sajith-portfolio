@@ -69,6 +69,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  verification: {
+    google: "YOUR_GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE",
+  },
   alternates: {},
 };
 

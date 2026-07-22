@@ -139,6 +139,22 @@ export default function Header() {
                 >
                   Email
                 </a>
+                <a
+                  href="https://in.linkedin.com/in/sajith-m-8bb029123"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center bg-transparent text-[#0F0F0F] border border-[#DCDCD4] py-3 text-xs uppercase tracking-wider font-semibold hover:border-[#0F0F0F] transition-colors"
+                >
+                  LinkedIn
+                </a>
+                <a
+                  href="https://www.instagram.com/sajithmadv/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center bg-transparent text-[#0F0F0F] border border-[#DCDCD4] py-3 text-xs uppercase tracking-wider font-semibold hover:border-[#0F0F0F] transition-colors"
+                >
+                  Instagram
+                </a>
               </div>
             </div>
           </motion.div>
