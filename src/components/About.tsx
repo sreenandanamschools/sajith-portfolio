@@ -15,8 +15,8 @@ export default function About() {
           client-first principles.
         </h2>
         <p className="text-[#5C5C56] font-light leading-relaxed mb-6">
-          I am an advocate with over 18 years of experience in
-          litigation, client counseling, and legal consulting. My practice covers
+          I am a leading advocate with over 18 years of experience in
+          litigation, client counseling, and legal consulting. Recognized as a top lawyer in Trivandrum, my practice covers
           drafting, case management, and court appearances across
           civil, criminal, consumer, and property matters.
         </p>

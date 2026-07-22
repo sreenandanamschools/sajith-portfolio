@@ -21,14 +21,16 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: {
     default:
-      "Sajith | Advocate in Thiruvananthapuram | Vanchiyoor Court & Trivandrum District Court",
+      "Sajith | Best Lawyer in Trivandrum | Advocate in Thiruvananthapuram",
     template: "%s | Sajith - Advocate",
   },
   description:
     "Sajith is an advocate practicing at Vanchiyoor Court and Trivandrum District Court, Thiruvananthapuram. Expert legal representation in Civil Litigation, Criminal Law, Family & Matrimonial Law, Consumer Disputes, and Property matters. MA LL.B., Government Law College, Kozhikode.",
   keywords: [
+    "Best lawyer in Trivandrum",
+    "Lawyers in Trivandrum",
     "Advocate in Thiruvananthapuram",
-    "Lawyer in Trivandrum",
+    "Top lawyers in Trivandrum",
     "Vanchiyoor Court advocate",
     "Trivandrum District Court lawyer",
     "Civil lawyer Kerala",
@@ -50,7 +52,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "Sajith | Advocate in Thiruvananthapuram | Vanchiyoor Court & Trivandrum District Court",
+      "Sajith | Best Lawyer in Trivandrum | Advocate in Thiruvananthapuram",
     description:
       "Expert legal representation in Civil Litigation, Criminal Law, Family & Matrimonial Law, Consumer Disputes, and Property matters at Vanchiyoor Court and Trivandrum District Court.",
     siteName: "Sajith - Advocate",
@@ -59,7 +61,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Sajith | Advocate in Thiruvananthapuram",
+    title: "Sajith | Best Lawyer in Trivandrum",
     description:
       "Advocate practicing at Vanchiyoor Court & Trivandrum District Court. Expert in Civil, Criminal, Family, and Property law.",
   },
@@ -88,13 +90,14 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LegalService",
-              name: "Sajith - Advocate",
+              name: "Sajith - Best Lawyer in Trivandrum",
               description:
-                "Advocate practicing at Vanchiyoor Court and Trivandrum District Court, Thiruvananthapuram.",
+                "Leading advocate practicing at Vanchiyoor Court and Trivandrum District Court, Thiruvananthapuram, offering expert legal solutions.",
               telephone: "+919633334556",
               email: "advsajithm@gmail.com",
               areaServed: [
                 { "@type": "City", name: "Thiruvananthapuram" },
+                { "@type": "City", name: "Trivandrum" },
                 { "@type": "State", name: "Kerala" },
               ],
               hasOccupation: {
