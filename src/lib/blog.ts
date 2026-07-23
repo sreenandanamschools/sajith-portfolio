@@ -42,7 +42,6 @@ export function getSortedPostsData(): BlogPostData[] {
         title: matterResult.data.title || "Untitled",
         date: matterResult.data.date || "2000-01-01",
         excerpt: matterResult.data.excerpt || "",
-        ...(matterResult.data as { title: string; date: string; excerpt: string }),
       };
     });
 
@@ -76,6 +75,5 @@ export async function getPostData(slug: string): Promise<BlogPostData> {
     title: matterResult.data.title || "Untitled",
     date: matterResult.data.date || "2000-01-01",
     excerpt: matterResult.data.excerpt || "",
-    ...(matterResult.data as { title: string; date: string; excerpt: string }),
   };
 }
