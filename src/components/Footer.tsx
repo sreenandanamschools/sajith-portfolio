@@ -14,16 +14,16 @@ export default function Footer() {
           <div>
             <h4 className="text-[10px] font-semibold uppercase tracking-wider text-[#FCFCFA]/40 mb-6">Navigate</h4>
             <ul className="flex flex-col gap-3 text-xs font-light text-[#FCFCFA]/80">
-              <li><a href="#about" className="hover:text-white transition-colors">About</a></li>
-              <li><a href="#practice" className="hover:text-white transition-colors">Practice Areas</a></li>
+              <li><a href="/#about" className="hover:text-white transition-colors">About</a></li>
+              <li><a href="/#practice" className="hover:text-white transition-colors">Practice Areas</a></li>
             </ul>
           </div>
           <div>
             <h4 className="text-[10px] font-semibold uppercase tracking-wider text-[#FCFCFA]/40 mb-6">Resources</h4>
             <ul className="flex flex-col gap-3 text-xs font-light text-[#FCFCFA]/80">
-              <li><a href="#process" className="hover:text-white transition-colors">Our Process</a></li>
-              <li><a href="#faq" className="hover:text-white transition-colors">FAQ</a></li>
-              <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
+              <li><a href="/#process" className="hover:text-white transition-colors">Our Process</a></li>
+              <li><a href="/#faq" className="hover:text-white transition-colors">FAQ</a></li>
+              <li><a href="/#contact" className="hover:text-white transition-colors">Contact</a></li>
             </ul>
           </div>
           <div>

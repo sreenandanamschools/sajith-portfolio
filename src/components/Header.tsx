@@ -15,7 +15,7 @@ export default function Header() {
         className="fixed top-0 left-0 w-full h-20 bg-[#FCFCFA]/90 border-b border-[#DCDCD4] z-50 backdrop-blur-md"
       >
         <div className="max-w-[1440px] mx-auto px-6 h-full flex justify-between items-center">
-          <a href="#" className="flex items-center gap-3 group">
+          <a href="/" className="flex items-center gap-3 group">
             <motion.div
               whileHover={{ rotateY: 15, rotateX: -10, z: 20 }}
               className="perspective-1000 preserve-3d"
@@ -34,13 +34,19 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-10">
-            {["about", "practice", "process", "faq"].map((item) => (
+            {[
+              { id: "about", label: "about" },
+              { id: "practice", label: "practice" },
+              { id: "process", label: "process" },
+              { id: "faq", label: "faq" },
+              { id: "blog", label: "blog", href: "/blog" },
+            ].map((item) => (
               <a
-                key={item}
-                href={`#${item}`}
+                key={item.id}
+                href={item.href || `/#${item.id}`}
                 className="text-xs uppercase tracking-widest text-[#5C5C56] hover:text-[#0F0F0F] transition-colors relative py-2 group"
               >
-                {item}
+                {item.label}
                 <span className="absolute bottom-0 left-0 w-full h-[1px] bg-[#0F0F0F] scale-x-0 origin-right transition-transform duration-300 group-hover:scale-x-100 group-hover:origin-left" />
               </a>
             ))}
@@ -100,11 +106,12 @@ export default function Header() {
           >
             <nav className="flex flex-col gap-6">
               {[
-                { label: "About", href: "#about" },
-                { label: "Services & Practice", href: "#practice" },
-                { label: "Our Process", href: "#process" },
-                { label: "FAQ", href: "#faq" },
-                { label: "Contact", href: "#contact" },
+                { label: "About", href: "/#about" },
+                { label: "Services & Practice", href: "/#practice" },
+                { label: "Our Process", href: "/#process" },
+                { label: "FAQ", href: "/#faq" },
+                { label: "Contact", href: "/#contact" },
+                { label: "Blog", href: "/blog" },
               ].map((item) => (
                 <a
                   key={item.href}
